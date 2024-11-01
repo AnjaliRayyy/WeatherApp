@@ -45,7 +45,7 @@ const getWeather=async(city)=>{
 		weatherImg.innerHTML=`<img src="snow.png" alt="error">`;
 	}
 
-	if(data['current']['condition'].text==="Light rain"){
+	if(data['current']['condition'].text==="Light rain" || data['current']['condition'].text==="Moderate or heavy rain with thunder"){
 		weatherImg.innerHTML=`<img src="rain.png" alt="error">`;
 	}
 	
