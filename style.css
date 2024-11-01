@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Dancing+Script:wght@400..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-style: normal
+}
+.body{
+    background-color: black;
+}
+.container{
+    position: relative;
+    width : 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding : 20px;
+    background-image: linear-gradient(-45deg,rgb(86, 243, 86),#00c2ff);
+}
+.container-item{
+    height: 25vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.search-area{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.search-bar input{
+    height : 8vh;
+    width: 40vw;
+    border:0;
+    outline: 0;
+    border-radius: 30px;
+    padding : 0 20px;
+}
+.search-icon{
+    background-color: white;
+    border-radius: 15px;
+    height: 8vh;
+    width : 4vw;
+    margin : 20px;
+    cursor: pointer;
+}
+.search-icon img{
+    position:relative;
+    width : 30%;
+    left : 35%;
+    top: 25%
+}
+
+.city-temp{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+.city-name, .temp {
+    color : white;
+    font-size: 5vh;
+    margin : 10px;
+}
+
+.humidity-icon{
+    position: relative;
+    right : 25%;
+}
+.wind-icon{
+    position: relative;
+    left:35%;
+}
+.humidity{
+    position: relative;
+    right : 20%;
+    color: white;
+    font-size: 5vh;
+}
+.wind{
+    position: relative;
+    left: 40%;
+    color: white;
+    font-size: 5vh;
+}
+.humidity>p , .wind>p{
+    font-size: 3vh;
+}
+
+/* @media only screen and (max-width: 800px){
+    .container{
+        padding: 2vh 2vw;
+        height: 150vh;
+        width : 120vw;
+    }
+    .search-bar input{
+        height : 8vh;
+        width: 80vw; 
+        font-size: 2.5vh;
+}
+.search-icon{
+    height: 8vh;
+    width : 10vw;
+    
+}
+} */
