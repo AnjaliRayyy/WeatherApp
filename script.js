@@ -41,7 +41,7 @@ const getWeather=async(city)=>{
 		weatherImg.innerHTML=`<img src="drizzle.png" alt="error">`;
 	}
 
-	if(data['current']['condition'].text==="Snow"){
+	if(data['current']['condition'].text==="Snow" || data['current']['condition'].text==="Light snow"){
 		weatherImg.innerHTML=`<img src="snow.png" alt="error">`;
 	}
 
