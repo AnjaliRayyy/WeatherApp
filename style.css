@@ -22,88 +22,143 @@
     background-image: linear-gradient(-45deg,rgb(86, 243, 86),#00c2ff);
 }
 .container-item{
+    margin-top: 2rem;
     height: 25vh;
     display: flex;
+    flex-direction: row;
     align-items: center;
     justify-content: space-between;
 }
 .search-area{
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+    gap: 10px;
 }
 .search-bar input{
-    height : 8vh;
-    width: 40vw;
+    height : 4rem;
+    width: 40rem;
     border:0;
     outline: 0;
     border-radius: 30px;
     padding : 0 20px;
+    font-size: 2.5vh;
 }
 .search-icon{
     background-color: white;
     border-radius: 15px;
-    height: 8vh;
-    width : 4vw;
+    height: 4rem;
+    width : 4rem;
     margin : 20px;
     cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 3rem;
 }
 .search-icon img{
+    position : fixed;
     position:relative;
     width : 30%;
-    left : 35%;
-    top: 25%
+    left: 2%;
+    top: 5%;
 }
-
 .city-temp{
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 20px;
+    width: 100%;
 }
 .city-name, .temp {
     color : white;
     font-size: 5vh;
     margin : 10px;
 }
-
-.humidity-icon{
-    position: relative;
-    right : 25%;
+.humidity-icon, .wind-icon{
+    position: static;
+    margin: 0 10px;
 }
-.wind-icon{
-    position: relative;
-    left:35%;
-}
-.humidity{
-    position: relative;
-    right : 20%;
+.humidity, .wind{
     color: white;
     font-size: 5vh;
-}
-.wind{
-    position: relative;
-    left: 40%;
-    color: white;
-    font-size: 5vh;
+    margin: 0 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 .humidity>p , .wind>p{
     font-size: 3vh;
 }
 
-/* @media only screen and (max-width: 800px){
+/* Responsive styles */
+@media only screen and (max-width: 800px){
     .container{
-        padding: 2vh 2vw;
-        height: 150vh;
-        width : 120vw;
+        padding: 10px 5vw;
+        height: auto;
+        width : 100vw;
+    }
+    .search-area{
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
     }
     .search-bar input{
-        height : 8vh;
-        width: 80vw; 
-        font-size: 2.5vh;
+        height : 7vh;
+        width: 70vw; 
+        font-size: 2.2vh;
+    }
+    .search-icon{
+        height: 7vh;
+        width : 7vh;
+        margin: 10px 0;
+    }
+    .container-item{
+        flex-direction: row;
+        height: auto;
+        margin-bottom: 15px;
+    }
+    .humidity, .wind{
+        margin-top: 2rem;
+        font-size: 4vh;
+    }
+    .city-name, .temp {
+        font-size: 4vh;
+    }
 }
-.search-icon{
-    height: 8vh;
-    width : 10vw;
-    
+
+@media only screen and (max-width: 480px){
+    .search-area{
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+    }
+    .search-bar input{
+        height : 6vh;
+        width: 90vw; 
+        font-size: 2vh;
+    }
+    .search-icon{
+        height: 6vh;
+        width : 12vw;
+        margin: 8px 0;
+    }
+    .container-item{
+        flex-direction: column;
+        height: auto;
+        margin-bottom: 10px;
+    }
+    .humidity, .wind{
+        margin-bottom: 3rem;
+        font-size: 3.5vh;
+    }
+    .city-name, .temp {
+        font-size: 3.5vh;
+    }
 }
-} */
